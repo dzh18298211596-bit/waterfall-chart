@@ -1,0 +1,85 @@
+====================================
+GitHub 部署指令（直接复制执行）
+====================================
+
+你的GitHub：https://github.com/dzh18298211596-bit
+
+
+第一步：创建GitHub仓库
+--------------------------
+1. 访问 https://github.com/new
+2. Repository name: waterfall-chart
+3. 选择 Public（公开）
+4. 不要勾选任何文件（保持空白）
+5. 点击 "Create repository"
+
+
+第二步：推送代码（直接复制粘贴下方命令）
+--------------------------
+cd C:\Users\dingzhonghua\waterfall-chart-github
+git branch -M main
+git remote add origin https://github.com/dzh18298211596-bit/waterfall-chart.git
+git push -u origin main
+
+
+第三步：启用GitHub Pages
+--------------------------
+1. 进入仓库 https://github.com/dzh18298211596-bit/waterfall-chart
+2. 点击 Settings（设置标签）
+3. 左侧菜单找到 Pages
+4. Source 选择 "Deploy from a branch"
+5. Branch 选择 "main"，文件夹选择 "/ (root)"
+6. 点击 Save
+
+
+第四步：获取在线链接
+--------------------------
+等待1-2分钟后，访问：
+https://dzh18298211596-bit.github.io/waterfall-chart/
+
+这就是你的在线瀑布图工具！
+
+
+第五步：在飞书中使用
+--------------------------
+将链接直接发送到飞书：
+https://dzh18298211596-bit.github.io/waterfall-chart/
+
+飞书会自动生成预览卡片，点击即可打开
+
+
+====================================
+可能需要的Git配置
+====================================
+如果推送时要求登录，执行：
+git config --global user.name "dzh18298211596-bit"
+git config --global user.email "你的邮箱@example.com"
+
+
+====================================
+文件位置
+====================================
+项目目录：C:\Users\dingzhonghua\waterfall-chart-github
+- index.html （瀑布图主页面）
+- README.md （项目说明）
+
+
+====================================
+后续更新网页
+====================================
+修改 index.html 后，执行以下命令更新在线版本：
+
+cd C:\Users\dingzhonghua\waterfall-chart-github
+git add .
+git commit -m "Update: 更新说明"
+git push
+
+等待1-2分钟，在线版本自动更新。
+
+
+====================================
+快速链接
+====================================
+- 你的仓库：https://github.com/dzh18298211596-bit/waterfall-chart
+- 在线工具：https://dzh18298211596-bit.github.io/waterfall-chart/
+- 设置页面：https://github.com/dzh18298211596-bit/waterfall-chart/settings/pages

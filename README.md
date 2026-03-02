@@ -4,7 +4,9 @@
 
 ## 在线访问
 
-部署后访问：`https://你的用户名.github.io/waterfall-chart/`
+🔗 **在线地址**：https://dzh18298211596-bit.github.io/waterfall-chart/
+
+📦 **仓库地址**：https://github.com/dzh18298211596-bit/waterfall-chart
 
 ## 功能特点
 
@@ -20,24 +22,23 @@
 ## 快速部署
 
 ### 1. 创建GitHub仓库
-在GitHub创建新仓库（Public），名称如：`waterfall-chart`
+在 https://github.com/new 创建新仓库（Public），名称为：`waterfall-chart`
 
 ### 2. 推送代码
 ```bash
 cd C:\Users\dingzhonghua\waterfall-chart-github
-git remote add origin https://github.com/你的用户名/waterfall-chart.git
-git add .
-git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/dzh18298211596-bit/waterfall-chart.git
 git push -u origin main
 ```
 
 ### 3. 启用GitHub Pages
-- 进入仓库 Settings → Pages
+- 进入 https://github.com/dzh18298211596-bit/waterfall-chart/settings/pages
 - Source 选择 "main" 分支
 - 保存后等待1-2分钟
 
 ### 4. 在飞书中使用
-直接分享链接即可，飞书会自动生成预览卡片
+直接分享链接 https://dzh18298211596-bit.github.io/waterfall-chart/ 即可
 
 ## 使用说明
 
