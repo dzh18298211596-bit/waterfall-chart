@@ -316,7 +316,7 @@
                     <div class="value" id="totalValue">10.2</div>
                     <div class="total-color-picker">
                         <label>柱子颜色:</label>
-                        <input type="color" id="totalColor" value="#70AD47"
+                        <input type="color" id="totalColor" value="#00A870"
                                onchange="updateTotalColor(this.value)"
                                title="选择总计柱颜色">
                     </div>
@@ -332,13 +332,13 @@
     <script>
         // 初始数据
         let dataItems = [
-            { name: '管理改善', value: 2.3, color: '#4472C4' },
-            { name: '技改投资', value: 1.3, color: '#ED7D31' },
-            { name: '光伏', value: 2.3, color: '#A5A5A5' },
-            { name: '电力入市', value: 4.3, color: '#FFC000' }
+            { name: '管理改善', value: 2.3, color: '#00A870' },
+            { name: '技改投资', value: 1.3, color: '#00A870' },
+            { name: '光伏', value: 2.3, color: '#00A870' },
+            { name: '电力入市', value: 4.3, color: '#00A870' }
         ];
 
-        let totalColor = '#70AD47'; // 总计柱颜色
+        let totalColor = '#00A870'; // 总计柱颜色
 
         const canvas = document.getElementById('chartCanvas');
         const ctx = canvas.getContext('2d');
@@ -415,11 +415,10 @@
 
         // 添加新行
         function addRow() {
-            const colors = ['#4472C4', '#ED7D31', '#A5A5A5', '#FFC000', '#70AD47', '#5B9BD5', '#C55A11'];
             dataItems.push({
                 name: '新项目',
                 value: 0,
-                color: colors[dataItems.length % colors.length]
+                color: '#00A870'
             });
             renderDataTable();
             drawChart();
@@ -489,15 +488,9 @@
             ctx.textAlign = 'center';
             ctx.fillText(chartTitle, width / 2, 40);
 
-            // 绘制网格线
-            ctx.strokeStyle = '#e0e0e0';
-            ctx.lineWidth = 1;
+            // Y轴标签（不绘制网格线）
             for (let i = 0; i <= 5; i++) {
                 const y = padding.top + (chartHeight / 5) * i;
-                ctx.beginPath();
-                ctx.moveTo(padding.left, y);
-                ctx.lineTo(width - padding.right, y);
-                ctx.stroke();
 
                 // Y轴标签
                 const value = maxValue * (1 - i / 5);
@@ -558,9 +551,6 @@
 
             ctx.fillStyle = totalColor;
             ctx.fillRect(totalX, totalY, barWidth, totalHeight);
-            ctx.strokeStyle = '#000';
-            ctx.lineWidth = 2;
-            ctx.strokeRect(totalX, totalY, barWidth, totalHeight);
 
             ctx.fillStyle = 'white';
             ctx.font = 'bold 16px Microsoft YaHei';
@@ -594,9 +584,6 @@
                 // 绘制柱子
                 ctx.fillStyle = item.color;
                 ctx.fillRect(x, topY, barWidth, barHeight);
-                ctx.strokeStyle = '#000';
-                ctx.lineWidth = 1;
-                ctx.strokeRect(x, topY, barWidth, barHeight);
 
                 // 柱子内数值
                 ctx.fillStyle = 'white';
